@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openapi-demo
+  description: An example deployment of a Backstage application.
+  annotations:
+    github.com/project-slug: spinvadors/openapi
+    backstage.io/techdocs-ref: dir:.
+    demo.backstage.io/techdocs-builder: local
+spec:
+  type: website
+  owner: spinvadors/maintainers
+  lifecycle: experimental
+  consumesApis:
+    - demo-openapi
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: demo-openapi
+  description: Openapi Backend Plugin
+spec:
+  type: openapi
+  lifecycle: production
+  owner: backstage/maintainers
+  apiConsumedBy:
+    - openapi-demo
+  definition:
+    $text: https://github.com/spinvadors/openapi/tree/master/openapi
