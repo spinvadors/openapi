@@ -26,4 +26,4 @@ spec:
   apiConsumedBy:
     - openapi-demo
   definition:
-    $text: https://github.com/spinvadors/openapi/tree/master/openapi
+    $text: https://raw.githubusercontent.com/spinvadors/openapi/master/openapi/spec3.yaml
