@@ -9,7 +9,7 @@ metadata:
     demo.backstage.io/techdocs-builder: local
 spec:
   type: website
-  owner: spinvadors/maintainers
+  owner: spinvadors/backend
   lifecycle: experimental
   consumesApis:
     - demo-openapi
@@ -22,7 +22,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: backstage/maintainers
+  owner: spinvadors/backend
   apiConsumedBy:
     - openapi-demo
   definition:
